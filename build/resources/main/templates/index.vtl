@@ -1,0 +1,22 @@
+<h1>Restaurants List!</h1>
+<ul>
+  #foreach($restaurant in $restaurantsArray)
+  <li> $restaurant.getName() on $restaurant.getDate()</li>
+  #end
+</ul>
+
+<p>Add a new Restaurant:</p>
+
+<form action="/restaurant" method="post">
+  <div class="form-group">
+  <label for="name">Restaurants Name</label>
+  <input id="name" name="name" type="text" class="form-control" required>
+</div>
+
+  <div class="form-group">
+    <label for="dateVisited">Date visited</label>
+    <input id="dateVisited" name="dateVisited" type="date" class="form-control" required>
+  </div>
+
+  <button type="submit" class="btn btn-default">Add task</button>
+</form>
